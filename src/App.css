@@ -1,0 +1,192 @@
+.container {
+    display: flex;
+}
+
+.left-navbar {
+    width: 200px;
+    height: 100vh;
+    background-color: #444444;
+    float: left;
+    transition: transform 0.3s ease;
+}
+
+.left-navbar.open {
+    transform: translateX(0);
+}
+
+.left-navbar:not(.open) {
+    transform: translateX(-100%);
+}
+
+.nav-item {
+    color: white;
+    padding: 1px;
+    cursor: pointer;
+}
+
+.nav-logo img{
+    object-fit: contain;
+}
+
+.nav-item:hover {
+    background-color: #343333;
+}
+
+.nav-icon {
+    margin-left: 5px;
+}
+
+.item-title {
+    font-family: 'Kdam Thmor';
+    font-size: 24px;
+    font-weight: 500;
+    margin-left: 5px;
+}
+
+.top-navbar {
+    height: 100px;
+    background-color: #444444;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: width 0.5s cubic-bezier(0.4,0,0.2,1);
+}
+
+.full-width {
+    height: 100px;
+    width: 100%;
+    background-color: #444444;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    transition: width 0.5m cubic-bezier(0.4,0,0.2,1);
+}
+
+.slide-icon {
+    color: white;
+    cursor: pointer;
+}
+
+.login-btn {
+    width: 225px;
+    height: 72px;
+    border-radius: 40px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.login-title {
+    color: #000000;
+    font-family: 'Kdam Thmor';
+    font-size: 20px;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.chatbox {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 97px;
+    height: 95px;
+    background-color: #05CFFB;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.chat-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.popup {
+    width: 400px;
+    height: 500px;
+    background-color: #ffffff;
+    border-radius: 25px;
+    z-index: 1000;
+    position: absolute;
+    top: 275px;
+    right: 20px;
+}
+
+.popup-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.close-btn {
+    cursor: pointer;
+}
+
+.contact-tab {
+    background-color: #05CFFB;
+}
+
+.contact-title {
+    font-family: 'Kdam Thmor';
+    padding: 10px;
+    color: #ffffff;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: 'Kdam Thmor';
+}
+
+.form-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+}
+  
+textarea {
+    height: 6rem;
+    resize: vertical;
+}
+
+button[type="submit"] {
+    width: 100px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: #05CFFB;
+    color: #ffffff;
+    font-family: 'Kdam Thmor';
+    font-size: 20px;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Kdam Thmor';
+}
+
+button[type="submit"]:hover {
+    background-color: #0499b7;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
