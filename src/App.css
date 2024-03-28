@@ -190,3 +190,17 @@ button[type="submit"]:hover {
     justify-content: center;
     margin-top: 60px;
 }
+
+.main-content {
+    position: absolute;
+    top: 100px;
+    left: 210px;
+    height: 89%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding-top: 120px;
+    padding-right: 50%;
+    box-sizing: border-box;
+    overflow-y: auto;
+}

@@ -4,6 +4,8 @@ import TopBar from './components/TopBar';
 import LeftBar from './components/LeftBar';
 import Chatbox from './components/Chatbox';
 import Popup from './components/Popup';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import AddExpense from './page/AddExpense';
 
 
 function App() {
@@ -19,12 +21,19 @@ function App() {
   }
 
   return (
-    <div className="container">
-      <LeftBar isOpen={openLeftBar}/>
-      <TopBar onSlideIconClick={handleSlideIconClick} openLeftBar={openLeftBar}/>
-      <Chatbox onChatboxClick ={togglePopup}/>
-      {showPopup && <Popup onClose={togglePopup}/>}
-    </div>
+    <Router> {/* Wrap your app with the Router component */}
+      <div className="container">
+        <LeftBar isOpen={openLeftBar}/>
+        <div className='main-content'>
+        <Routes> {/* Define routes inside the Switch component */}
+          <Route path="/add-expense" element={<AddExpense />} /> {/* Route to the new expense input page */}
+        </Routes>
+        </div>
+        <TopBar onSlideIconClick={handleSlideIconClick} openLeftBar={openLeftBar}/>
+        <Chatbox onChatboxClick ={togglePopup}/>
+        {showPopup && <Popup onClose={togglePopup}/>}
+      </div>
+    </Router>
   );
 }
 

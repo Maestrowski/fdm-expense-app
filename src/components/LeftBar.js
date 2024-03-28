@@ -1,15 +1,24 @@
-import React from 'react'
+import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 const LeftBar = ({isOpen}) => {
+  const navigate = useNavigate();
+
+  const handleLogoClick = () => {
+    navigate('/');
+  }
+
   return (
     <div className={`left-navbar ${isOpen ? 'open' : ''}`}>
-      <div className='nav-item'>
+      <div className='nav-item' onClick={handleLogoClick}>
         <img src={`icons/Logo.png`} className='nav-logo'/>
       </div>
-      <div className='nav-item'>
+      <Link to ="/add-expense">
+        <div className='nav-item'>
         <img src={`icons/Plus.png`} className='nav-icon'/>
         <p className='item-title'>Add Expense</p>
-      </div>
+        </div>
+      </Link>
       <div className='nav-item'>
         <img src={`icons/ExpData.png`} className='nav-icon'/>
         <p className='item-title'>Expense Data</p>
