@@ -78,3 +78,13 @@
     font-size: 24px;
     font-family: 'Kdar Thmor';
 }
+
+.submit-expense {
+  width: 175px;
+  margin-left: 10px;
+}
+
+.submit-btn {
+  width: 175px;
+  margin-left: 10px;
+}

@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import React, {useContext, useState, useRef} from 'react';
+import {GlobalContext} from '../context/GlobalState';
 import './AddExpense.css';
 
 const AddExpense = () => {
@@ -6,27 +7,59 @@ const AddExpense = () => {
     const [expenseName, setExpenseName] = useState('');
     const [expenseType, setExpenseType] = useState('');
     const [value, setValue] = useState('');
+    const [selectedFile, setSelectedFile] = useState(null);
+
+    const fileInputRef = useRef(null);
+    const { addTransaction, addReceipt } = useContext(GlobalContext);
 
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log('Expense Submitted:', { date, expenseName, expenseType, value});
+        const newTransaction = {
+            id: Math.floor(Math.random()*10000000),
+            date,
+            expenseName,
+            expenseType,
+            value: +value,
+            receipt: selectedFile
+        }
+
+        addTransaction(newTransaction);
         setDate('');
         setExpenseName('');
         setExpenseType('');
         setValue('');
+        setSelectedFile(null);
     };
+
+    const handleExpenseClaim = (e) => {
+        e.preventDefault();
+        console.log('Expense Claim Sent:', { date, expenseName, expenseType, value});
+        setDate('');
+        setExpenseName('');
+        setExpenseType('');
+        setValue('');
+        setSelectedFile(null);
+    }
+
+    const handleAttachReceipt = () => {
+        fileInputRef.current.click();
+    }
+
+    const handleFileChange = (e) => {
+        setSelectedFile(e.target.files[0]);
+        addReceipt(e.target.files[0]);
+        console.log('Receipt attached successfully')
+    }
 
   return (
     <div className='add-expense'>
         <div className='title-bar'>
             <h1 className='add-title'>Add Expense</h1>
             <div className='title-buttons'>
-                <div className='receipt-btn'>
+                <button className='receipt-btn' onClick={handleAttachReceipt}>
                     Attach Receipt
-                </div>
-                <div className='submit-btn'>
-                    Submit
-                </div>
+                </button>
             </div>
         </div>
         <div className='form-container'>
@@ -63,7 +96,9 @@ const AddExpense = () => {
                     />
                 </div>
                 <div className='form-group'>
-                    <label htmlFor='Value'>Value:</label>
+                    <label htmlFor='Value'
+                    >Value: <br />
+                    ("-" = expense, "+" = income)</label>
                     <input 
                     type="text"
                     id = "value"
@@ -72,9 +107,14 @@ const AddExpense = () => {
                     required
                     />
                 </div>
-                <div className='submit-expense'>
-                    <p className='submit-title'>Submit Expense Claim</p>
-                </div>
+                <input 
+                type="file"
+                ref={fileInputRef}
+                style={{display: 'none'}}
+                onChange={handleFileChange}
+                />
+                <button className='submit-expense'>Submit</button>
+                <button className='submit-btn' onClick={handleExpenseClaim}>Expense Claim</button>
             </form>
         </div>
     </div>
