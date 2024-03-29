@@ -6,7 +6,7 @@ import Chatbox from './components/Chatbox';
 import Popup from './components/Popup';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import AddExpense from './page/AddExpense';
-
+import Export from './page/Export';
 
 function App() {
   const [openLeftBar, setOpenLeftBar] = useState(true);
@@ -20,6 +20,13 @@ function App() {
     setShowPopup(prevState => !prevState);
   }
 
+  const receiptData = [
+    ["Item", "Price"],
+    ["Item 1", "10"],
+    ["Item 2", "20"],
+    ["Item 3", "15"]
+  ];
+
   return (
     <Router> {/* Wrap your app with the Router component */}
       <div className="container">
@@ -27,6 +34,7 @@ function App() {
         <div className='main-content'>
         <Routes> {/* Define routes inside the Switch component */}
           <Route path="/add-expense" element={<AddExpense />} /> {/* Route to the new expense input page */}
+          <Route path="/Export" element={<Export />} />
         </Routes>
         </div>
         <TopBar onSlideIconClick={handleSlideIconClick} openLeftBar={openLeftBar}/>
