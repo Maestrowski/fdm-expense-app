@@ -13,6 +13,9 @@ import Export from './page/Export';
 import Settings from './page/Settings';
 import Login from './page/Login';
 import {GlobalProvider} from './context/GlobalState';
+import Budget from './components/Budget/Budget';
+
+import './components/Budget/Budget.css';
 
 
 function App() {
@@ -33,6 +36,7 @@ function App() {
       <div className="container">
         <LeftBar isOpen={openLeftBar}/>
         <div className='main-content'>
+        <Budget/>
         <Routes> {/* Define routes inside the Switch component */}
           <Route path='/' element={<div></div>}/>
           <Route path="/add-expense" element={<AddExpense />} />{' '} 
