@@ -1,0 +1,42 @@
+/* grid c4 */
+.Expenses-Dashboard .grid-c-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.grid-c4-content {
+  margin-top: 20px;
+  border-radius: 16px;
+}
+.Expenses-Dashboard .grid-c4-content {
+  padding: 12px;
+}
+.Expenses-Dashboard .grid-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+.Expenses-Dashboard .grid-item-l {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 16px;
+}
+.Expenses-Dashboard .grid-item-l .icon {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.Expenses-Dashboard .grid-item-l .icon img {
+  width: 20px;
+}
+.Expenses-Dashboard .grid-item-l .text {
+  font-weight: 600;
+}
+.Expenses-Dashboard .grid-item-l .text span {
+  font-weight: 300;
+  font-size: 15px;
+  display: block;
+  margin-top: 5px;
+  opacity: 0.9;
+}
