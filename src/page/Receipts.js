@@ -32,7 +32,7 @@ const Receipts = () => {
       <ul>
         {receipts.map((receipt, index) => (
           <li key={index}>
-            <p>Filename: {getFileNameWithoutExtension(receipt.name)}</p>
+            <p>{getFileNameWithoutExtension(receipt.name)}</p>
             <button onClick={() => openReceiptInNewTab(receipt)}>View Receipt</button>
           </li>
         ))}
