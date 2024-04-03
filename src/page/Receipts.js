@@ -29,7 +29,7 @@ const Receipts = () => {
   return (
     <div>
       <h2>Receipts</h2>
-      <ul>
+      <ul style={{ listStyleType: 'none', padding: 0 }}> {/* Remove bullet points and padding */}
         {receipts.map((receipt, index) => (
           <li key={index}>
             <p>{getFileNameWithoutExtension(receipt.name)}</p>
