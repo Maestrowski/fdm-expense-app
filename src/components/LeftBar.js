@@ -37,7 +37,7 @@ const LeftBar = ({isOpen}) => {
         <p className='item-title'>Expense Claims</p>
       </div>
       </Link>
-      <Link to ="exports">
+      <Link to ="export">
       <div className='nav-item'>
         <img src={`icons/Export.png`} className='nav-icon'/>
         <p className='item-title'>Export</p>
