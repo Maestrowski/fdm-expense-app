@@ -101,7 +101,7 @@
     right: 20px;
     width: 97px;
     height: 95px;
-    background-color: #05CFFB;
+    background-color: #444444;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -136,7 +136,7 @@
 }
 
 .contact-tab {
-    background-color: #05CFFB;
+    background-color: #05fb05;
 }
 
 .contact-title {
@@ -171,7 +171,7 @@ button[type="submit"] {
     width: 100px;
     height: 40px;
     border-radius: 40px;
-    background-color: #05CFFB;
+    background-color: #05fb05;
     color: #ffffff;
     font-family: 'Kdam Thmor';
     font-size: 20px;
@@ -183,7 +183,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background-color: #0499b7;
+    background-color: #0db704;
 }
 
 .button-container {

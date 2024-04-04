@@ -28,7 +28,7 @@
   height: 50px;
   font-size: 24px;
   font-family: 'Kdar Thmor';
-  background-color: #05CFFB;
+  background-color: #05fb05;
   border-radius: 40px;
   display: flex;
   justify-content: center;
@@ -38,7 +38,7 @@
 
 .receipt-btn:hover,
 .submit-btn:hover {
-    background-color: #0499b7;
+    background-color: #0db704;
 }
 
 .form-container {
@@ -71,7 +71,7 @@
 }
 
 .submit-expense:hover{
-    background-color: #0499b7;
+    background-color: #0db704;
 }
 
 .submit-title {
