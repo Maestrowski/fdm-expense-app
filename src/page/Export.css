@@ -1,0 +1,43 @@
+/* Export.css */
+
+.export-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .title-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .export-title {
+    font-size: 24px;
+    font-family: 'Kdar Thmor';
+    margin-right: 10px;
+  }
+  
+  .format-select {
+    height: 40px;
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  
+  .export-button {
+    width: 180px;
+    height: 50px;
+    font-size: 24px;
+    font-family: 'Kdar Thmor';
+    background-color: #05CFFB;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .export-button:hover {
+    background-color: #0499b7;
+  }
