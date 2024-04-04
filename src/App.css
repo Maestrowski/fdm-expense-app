@@ -4,7 +4,7 @@
 
 .left-navbar {
     width: 200px;
-    height: 110vh;
+    height: 100vh;
     background-color: #444444;
     float: left;
     transition: transform 0.3s ease;
@@ -21,6 +21,8 @@
 .nav-item {
     color: white;
     cursor: pointer;
+    height: 105px;
+    padding-top: 0.5rem;
 }
 
 .nav-logo img{
