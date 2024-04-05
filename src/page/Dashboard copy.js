@@ -13,7 +13,6 @@ const Dashboard = () => {
   const currencies = ['USD', 'EUR', 'JPY', 'CAD', 'AUD', 'CHF', 'CNY', 'SEK', 'NZD'];
 
   const totalExpenses = budget.reduce((acc, curr) => acc + curr.amount, 0);
-  
 
   useEffect(() => {
     if (targetCurrency) {
