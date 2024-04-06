@@ -13,6 +13,12 @@ const LeftBar = ({isOpen}) => {
       <div className='nav-item' onClick={handleLogoClick}>
         <img src={`icons/Logo.png`} className='nav-logo'/>
       </div>
+      <Link to ="/dashboard">
+        <div className='nav-item'>
+        <img src={`icons/Dashboard.png`} className='nav-icon'/>
+        <p className='item-title'>Dashboard</p>
+        </div>
+      </Link>
       <Link to ="/add-expense">
         <div className='nav-item'>
         <img src={`icons/Plus.png`} className='nav-icon'/>
@@ -37,13 +43,13 @@ const LeftBar = ({isOpen}) => {
         <p className='item-title'>Expense Claims</p>
       </div>
       </Link>
-      <Link to="export">
+      <Link to ="export">
       <div className='nav-item'>
         <img src={`icons/Export.png`} className='nav-icon'/>
         <p className='item-title'>Export</p>
       </div>
       </Link>
-      <Link to="settings">
+      <Link to ="settings">
       <div className='nav-item'>
         <img src={`icons/Settings.png`} className='nav-icon'/>
         <p className='item-title'>Settings</p>

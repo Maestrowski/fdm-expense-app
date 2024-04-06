@@ -32,16 +32,6 @@ const AddExpense = () => {
         setSelectedFile(null);
     };
 
-    const handleExpenseClaim = (e) => {
-        e.preventDefault();
-        console.log('Expense Claim Sent:', { date, expenseName, expenseType, value});
-        setDate('');
-        setExpenseName('');
-        setExpenseType('');
-        setValue('');
-        setSelectedFile(null);
-    }
-
     const handleAttachReceipt = () => {
         fileInputRef.current.click();
     }
@@ -114,7 +104,6 @@ const AddExpense = () => {
                 onChange={handleFileChange}
                 />
                 <button className='submit-expense'>Submit</button>
-                <button className='submit-btn' onClick={handleExpenseClaim}>Expense Claim</button>
             </form>
         </div>
     </div>
