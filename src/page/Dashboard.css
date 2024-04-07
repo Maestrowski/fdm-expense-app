@@ -77,7 +77,7 @@ button {
 .app {
   display: flex;
   min-height: 100vh;
-  flex-direction: column; /* Ensures vertical layout of sections */
+  flex-direction: column; 
 }
 
 /* Commons */
@@ -92,21 +92,21 @@ button {
   box-shadow: rgba(0, 0, 0, 0.05) 0px 8px 24px;
   color: var(--clr-white);
   padding: 24px;
-  margin-bottom: 30px;  /* Added margin to the bottom of each section */
+  margin-bottom: 30px;  
 }
 
 .grid-common:last-child {
-  margin-bottom: 0; /* Removes bottom margin from the last widget */
+  margin-bottom: 0; 
 }
 
 @media screen and (max-width: 1400px) {
   .grid-common {
     padding: 16px;
-    margin-bottom: 20px; /* Smaller bottom margin for smaller screens */
+    margin-bottom: 20px; 
   }
 }
 
-/* Grid System */
+/* Flex-Grid System */
 .Expenses-Dashboard .grid-c-top {
   display: flex;
   align-items: center;
@@ -175,37 +175,37 @@ button {
 
 /* Dropdown Styles */
 .currency-dropdown,.convert-button {
-    background-color: var(--clr-jet); /* dark background to match the theme */
-    color: var(--clr-silver-v1); /* lighter text for contrast */
-    border: 2px solid var(--clr-silver); /* subtle border */
-    border-radius: 8px; /* rounded corners */
-    padding: 10px 15px; /* comfortable padding */
-    font-size: 16px; /* readable text size */
-    font-family: var(--font-family-bai); /* consistent font */
-    width: 100%; /* full width to match container */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* soft shadow for depth */
-    appearance: none; /* remove default styling */
-    cursor: pointer; /* cursor indication for interaction */
+    background-color: var(--clr-jet); 
+    color: var(--clr-silver-v1); 
+    border: 2px solid var(--clr-silver); 
+    border-radius: 8px; 
+    padding: 10px 15px; 
+    font-size: 16px; 
+    font-family: var(--font-family-bai); 
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    appearance: none; 
+    cursor: pointer; 
   }
   
-  /* Hover and focus states for dropdown */
+  
   .currency-dropdown:hover,
   .currency-dropdown:focus {
-    border-color: var(--clr-pumpkin); /* highlight border on hover/focus */
-    outline: none; /* remove default focus outline */
+    border-color: var(--clr-pumpkin); 
+    outline: none; 
   }
   
-  /* Style for the dropdown arrow indicator */
+  
   .currency-dropdown::-ms-expand {
-    display: none; /* hide the default dropdown arrow in IE */
+    display: none; 
   }
   .currency-dropdown::after {
-    content: "▼"; /* custom arrow */
-    font-size: 12px; /* size of the arrow */
-    color: var(--clr-white); /* color of the arrow */
-    right: 15px; /* positioning from the right */
-    top: 18px; /* positioning from the top */
-    position: absolute; /* absolute position within the select box */
-    pointer-events: none; /* prevent the arrow from being clickable */
+    content: "▼"; 
+    font-size: 12px; 
+    color: var(--clr-white); 
+    right: 15px; 
+    top: 18px; 
+    position: absolute; 
+    pointer-events: none; 
   }
   
