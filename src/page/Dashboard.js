@@ -1,25 +1,30 @@
-import React, { useState, useEffect } from 'react';
-import { budget } from "../page/data.js";
+import React, { useContext, useState, useEffect } from 'react';
+import { GlobalContext } from '../context/GlobalState';
 import "../page/Dashboard.css";
+import { Pie } from 'react-chartjs-2';
 
 const Dashboard = () => {
-  const [baseCurrency] = useState('GBP'); // Base currency is always GBP
+  
+  const { transactions } = useContext(GlobalContext);
+
+  
+  const total = transactions.reduce((acc, transaction) => acc + Number(transaction.value), 0);
+
+  /* Exchange Currency - Start */
+  const [baseCurrency] = useState('GBP'); 
   const [targetCurrency, setTargetCurrency] = useState('');
   const [exchangeRates, setExchangeRates] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  // List of currencies for the dropdown
-  const currencies = ['USD', 'EUR', 'JPY', 'CAD', 'AUD', 'CHF', 'CNY', 'SEK', 'NZD'];
-
-  const totalExpenses = budget.reduce((acc, curr) => acc + curr.amount, 0);
   
+  const currencies = ['USD', 'EUR', 'JPY', 'CAD', 'AUD', 'CHF', 'CNY', 'SEK', 'NZD'];
 
   useEffect(() => {
     if (targetCurrency) {
       fetchExchangeRates();
     }
-  }, [targetCurrency]);  // useEffect will trigger fetchExchangeRates when targetCurrency changes
+  }, [targetCurrency]);  
 
   const fetchExchangeRates = async () => {
     if (!targetCurrency) {
@@ -48,29 +53,69 @@ const Dashboard = () => {
     setTargetCurrency(event.target.value);
   };
 
-  return (
-    <div className="app">
-      <div className="Expenses-Section grid-common">
-        <h1>Expenses</h1>
-        <div className="grid-two-item">
-          {budget.map((item) => (
-            <div className="grid-item" key={item.id}>
-              <div className="grid-item-l">
-                <p className="text text-silver-v1">{item.title} <span>{item.type}</span></p>
-              </div>
-              <div className="grid-item-r">
-                <span className="text-silver-v1">£ {item.amount}</span>
-              </div>
-            </div>
-          ))}
-          <div className="grid-c-top">
-            <h2>Total Expenses: </h2>
-            <span className="lg-value">£{totalExpenses}</span>
-          </div>
-        </div>
-      </div>
+  /* Exchange Currency - End */
 
-      <div className="Currency-Conversion-Section grid-common">
+  /* pie chart - Start */
+
+  const expensesByCurrency = transactions.reduce((acc, transaction) => {
+    const { expenseType, value } = transaction;
+    acc[expenseType] = (acc[expenseType] || 0) + Number(value);
+    return acc;
+  }, {});
+  
+  
+  const pieChartData = {
+    labels: Object.keys(expensesByCurrency),
+    datasets: [{
+      data: Object.values(expensesByCurrency),
+      backgroundColor: [
+        '#FF6384', '#36A2EB', '#FFCE56', 
+        // ...
+      ],
+      hoverBackgroundColor: [
+        '#FF6384', '#36A2EB', '#FFCE56', 
+        // ...
+      ]
+    }]
+  };
+
+  /* pie chart - End */
+  
+
+  return (
+    <div className="grid-two-item grid-common Expenses-Dashboard">
+        <div className="grid-c-title">
+            <h3 className="grid-c-title-text">Expenses</h3>
+            <button className="grid-c-title-icon">
+                {/* Placeholder for button icon */}
+            </button>
+        </div>
+        <div className="grid-c-top text-silver-v1">
+            <h2 className="lg-value">Total </h2>
+            <span className="lg-value">£ {total.toFixed(2)}</span> 
+        </div>
+        <div className="grid-c4-content bg-jet">
+            <div className="grid-items">
+                {
+                    
+                    transactions.map((transaction) => (
+                        <div className="grid-item" key={transaction.id}>
+                            <div className="grid-item-l">
+                                <div className="icon">
+                                    {/* Placeholder for item icon */}
+                                </div>
+                                <p className="text text-silver-v1">{transaction.expenseName} <span>{transaction.expenseType}</span></p>
+                            </div>
+                            <div className="grid-item-r">
+                                <span className="text-silver-v1">£ {Number(transaction.value).toFixed(2)}</span>
+                            </div>
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
+
+        <div className="Currency-Conversion-Section grid-common">
         <h1>Exchange Rates</h1>
         <div className="grid-c-title">
           <select
@@ -90,11 +135,11 @@ const Dashboard = () => {
           <p className="text-scarlet">{error}</p>
         ) : exchangeRates && (
           <div className="grid-c4-content">
-            <h2>Base: {baseCurrency}, Amount: {totalExpenses}, Target: {targetCurrency}</h2>
+            <h2>Base: {baseCurrency}, Amount: {total.toFixed(2)}, Target: {targetCurrency}</h2>
             <ul>
-              {targetCurrency in exchangeRates.rates ? (
+              {exchangeRates && targetCurrency in exchangeRates.rates ? (
                 <li className="text-green">
-                  {targetCurrency}: {(exchangeRates.rates[targetCurrency] * totalExpenses).toFixed(2)}
+                  {targetCurrency}: {(exchangeRates.rates[targetCurrency] * total).toFixed(2)}
                 </li>
               ) : (
                 <p className="text-scarlet">Target currency not available in rates.</p>
@@ -103,6 +148,14 @@ const Dashboard = () => {
           </div>
         )}
       </div>
+
+      {/*
+      <div className="pie-chart-widget" style={{ backgroundColor: '#333', color: '#fff', marginLeft: '20px' }}>
+        <h3>Expenses by Currency Type</h3>
+        <Pie data={pieChartData} options={{ maintainAspectRatio: false }} />
+      </div>  
+              */}
+
     </div>
   );
 };
