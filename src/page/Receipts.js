@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { useTranslation } from 'react-i18next'; // Import useTranslation hook
 import { GlobalContext } from '../context/GlobalState';
+import './Receipts.css'
 
 const Receipts = () => {
   const { t } = useTranslation(); // Use useTranslation hook to access translations
@@ -29,13 +30,13 @@ const Receipts = () => {
   };
 
   return (
-    <div>
-      <h2>{t('receipts.title')}</h2> {/* Translate title */}
-      <ul style={{ listStyleType: 'none', padding: 0 }}> {/* Remove bullet points and padding */}
+    <div className='receipts-container'>
+      <h2 className='receipts-title'>{t('receipts.title')}</h2> {/* Translate title */}
+      <ul className='receipts-list'> {/* Remove bullet points and padding */}
         {receipts.map((receipt, index) => (
           <li key={index}>
-            <p>{getFileNameWithoutExtension(receipt.name)}</p>
-            <button onClick={() => openReceiptInNewTab(receipt)}>{t('receipts.viewReceiptButton')}</button> {/* Translate button label */}
+            <span className='receipt-filename'>{getFileNameWithoutExtension(receipt.name)}</span>
+            <button className='view-receipt-button' onClick={() => openReceiptInNewTab(receipt)}>{t('receipts.viewReceiptButton')}</button> {/* Translate button label */}
           </li>
         ))}
       </ul>
