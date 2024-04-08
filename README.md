@@ -13,3 +13,7 @@ Inside your terminal write the following commands
 8) npm install react-chartjs-2
 9) npm install i18next
 10) npm install react-i18next
+
+To make the website visible type in the terminal
+
+11) npm start
