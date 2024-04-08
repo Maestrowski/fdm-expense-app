@@ -1,0 +1,75 @@
+{
+    "login": "Anmelden",
+    "addExpense": {
+      "title": "Ausgabe hinzufügen",
+      "dateLabel": "Datum",
+      "datePlaceholder": "TT/MM/JJJJ",
+      "expenseNameLabel": "Ausgabename",
+      "expenseTypeLabel": "Art der Ausgabe",
+      "valueLabel": "Wert",
+      "submitButton": "Einreichen",
+      "attachReceiptButton": "Beleg anhängen",
+      "expenseClaimButton": "Kostenerstattung beantragen"
+    },
+    "leftBar": {
+      "addExpense": "Ausgabe hinzufügen",
+      "dashboard": "Armaturenbrett",
+      "expenseData": "Ausgabedaten",
+      "receipts": "Belege",
+      "expenseClaims": "Kostenerstattungsanträge",
+      "export": "Exportieren",
+      "settings": "Einstellungen"
+    },
+    "expenseData": {
+      "title": "Ausgabedaten",
+      "dateLabel": "Datum",
+      "expenseNameLabel": "Ausgabename",
+      "expenseTypeLabel": "Art der Ausgabe",
+      "valueLabel": "Wert"
+    },
+    "receipts": {
+      "title": "Belege",
+      "viewReceiptButton": "Beleg anzeigen"
+    },
+    "expenseClaims": {
+      "title": "Kostenerstattungsanträge",
+      "allExpenses": "Alle Ausgaben",
+      "pendingClaims": "Ausstehende Anträge",
+      "approvedClaims": "Genehmigte Anträge",
+      "claimButton": "Beantragen",
+      "unclaimButton": "Antrag zurückziehen",
+      "approveButton": "Genehmigen"
+    },
+    "export": {
+        "title": "Beleg herunterladen",
+        "downloadButton": "Herunterladen CSV"
+    },
+    "settings": {
+        "title": "Einstellungen"
+    },
+    "popup": {
+        "contactUs": "Kontaktiere uns",
+        "fullNameLabel": "Vollständiger Name",
+        "emailLabel": "E-Mail-Adresse",
+        "messageLabel": "Nachricht",
+        "sendButton": "Senden"
+    },
+    "topBar": {
+        "loginSignup": "Anmelden / Registrieren"
+    },
+    "dashboard": {
+      "expenses": "Ausgaben",
+      "totalExpenses": "Gesamtausgaben",
+      "exchangeRates": "Wechselkurse",
+      "selectCurrency": "Wählen Sie eine Währung aus",
+      "loading": "Laden...",
+      "loadExchangeRatesFailed": "Fehler beim Laden der Wechselkurse.",
+      "targetCurrencyNotAvailable": "Zielwährung nicht verfügbar in Kursen.",
+      "expensesByCategory": "Ausgaben nach Kategorie",
+      "baseCurrency": "Basis: {{baseCurrency}}, Betrag: {{total}}, Ziel: {{targetCurrency}}",
+      "transaction": {
+        "expenseName": "Name der Ausgabe",
+        "expenseType": "Art der Ausgabe"
+      }
+    }
+}

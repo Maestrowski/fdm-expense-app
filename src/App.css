@@ -205,3 +205,26 @@ button[type="submit"]:hover {
     box-sizing: border-box;
     overflow-y: auto;
 }
+
+.language-btns {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .language-btns button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .language-btns button:hover {
+    background-color: #45a049;
+  }
+  
