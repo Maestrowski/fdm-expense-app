@@ -95,6 +95,8 @@ const AddExpense = () => {
                             id="value"
                             value={value}
                             onChange={(e) => setValue(e.target.value)}
+                            pattern="^\d+(\.\d+)?$"
+                            title={t('addExpense.valueValidationMessage')}
                             required
                         />
                     </div>
