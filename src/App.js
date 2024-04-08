@@ -13,6 +13,7 @@ import ExpenseClaims from './page/ExpenseClaims';
 import Export from './page/Export';
 import Settings from './page/Settings';
 import Login from './page/Login';
+import SignUp from './page/SignUp';
 import {GlobalProvider} from './context/GlobalState';
 
 
@@ -51,6 +52,7 @@ function App() {
           <Route path="/export" element={<Export />} />{' '}
           <Route path="/settings" element={<Settings />} />{' '}
           <Route path="/login" element={<Login />} />{' '}
+          <Route path="/signup" element={<SignUp />} />{' '}
         </Routes>
         </div>
         <TopBar onSlideIconClick={handleSlideIconClick} openLeftBar={openLeftBar}/>

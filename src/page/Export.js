@@ -1,7 +1,10 @@
 import React from 'react';
 import './Export.css';
+import { useTranslation } from 'react-i18next'; // Import useTranslation hook
 
 const Export = () => {
+  const { t } = useTranslation(); // Initialize useTranslation hook
+
   const handleDownload = () => {
     const transactions = [];
     const transactionElements = document.querySelectorAll('.transaction');
@@ -37,11 +40,11 @@ const Export = () => {
   return (
     <div className="export-container">
       <div className="title-bar">
-        <h2 className="export-title">Download Expense Data</h2>
-        <button className="export-button" onClick={handleDownload}>Download CSV</button>
+        <h2 className="export-title">{t('export.title')}</h2> {/* Translate title */}
+        <button className="export-button" onClick={handleDownload}>{t('export.downloadButton')}</button>
       </div>
     </div>
-  );
-};
+  )
+}
 
 export default Export;
