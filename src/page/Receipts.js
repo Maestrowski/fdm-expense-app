@@ -1,7 +1,9 @@
 import React, { useContext } from 'react';
+import { useTranslation } from 'react-i18next'; // Import useTranslation hook
 import { GlobalContext } from '../context/GlobalState';
 
 const Receipts = () => {
+  const { t } = useTranslation(); // Use useTranslation hook to access translations
   const { receipts } = useContext(GlobalContext);
 
   const getFileNameWithoutExtension = (filename) => {
@@ -28,12 +30,12 @@ const Receipts = () => {
 
   return (
     <div>
-      <h2>Receipts</h2>
+      <h2>{t('receipts.title')}</h2> {/* Translate title */}
       <ul style={{ listStyleType: 'none', padding: 0 }}> {/* Remove bullet points and padding */}
         {receipts.map((receipt, index) => (
           <li key={index}>
             <p>{getFileNameWithoutExtension(receipt.name)}</p>
-            <button onClick={() => openReceiptInNewTab(receipt)}>View Receipt</button>
+            <button onClick={() => openReceiptInNewTab(receipt)}>{t('receipts.viewReceiptButton')}</button> {/* Translate button label */}
           </li>
         ))}
       </ul>
@@ -42,4 +44,3 @@ const Receipts = () => {
 };
 
 export default Receipts;
-

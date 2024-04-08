@@ -1,7 +1,9 @@
 import React, { useState, useContext } from 'react';
+import { useTranslation } from 'react-i18next'; // Import useTranslation hook
 import { GlobalContext } from '../context/GlobalState';
 
 const ExpenseClaims = () => {
+  const { t } = useTranslation(); // Initialize useTranslation hook
   const { transactions, userRole } = useContext(GlobalContext);
   const [claimsStatus, setClaimsStatus] = useState(transactions.reduce((acc, transaction) => {
     acc[transaction.id] = 'unclaimed';
@@ -18,7 +20,7 @@ const ExpenseClaims = () => {
 
   const handleApprove = (transactionId) => {
     if (userRole !== 'manager') {
-      alert('Only managers can approve expenses.');
+      alert(t('expenseClaims.managerApproval')); // Translate alert message
       return;
     }
     setClaimsStatus({
@@ -68,59 +70,59 @@ const ExpenseClaims = () => {
   return (
     <div style={mainLayoutStyle}>
       <div style={sectionStyle}>
-        <h2>Expense Claims</h2>
-        <h3>All Expenses</h3>
+        <h2>{t('expenseClaims.title')}</h2>
+        <h3>{t('expenseClaims.allExpenses')}</h3>
         <ul style={containerStyle}>
           {transactions.map((transaction) => (
             <li key={transaction.id} style={listItemStyle(claimsStatus[transaction.id])}>
-              <p>Date: {transaction.date}</p>
-              <p>Expense Name: {transaction.expenseName}</p>
-              <p>Expense Type: {transaction.expenseType}</p>
-              <p>Value: {transaction.value}</p>
+              <p>{t('expenseData.dateLabel')}: {transaction.date}</p>
+              <p>{t('expenseData.expenseNameLabel')}: {transaction.expenseName}</p>
+              <p>{t('expenseData.expenseTypeLabel')}: {transaction.expenseType}</p>
+              <p>{t('expenseData.valueLabel')}: {transaction.value}</p>
               <button onClick={() => handleClaim(transaction.id)} style={buttonStyle}>
-                {claimsStatus[transaction.id] === 'unclaimed' ? 'Claim' : 'Unclaim'}
+                {claimsStatus[transaction.id] === 'unclaimed' ? t('expenseClaims.claimButton') : t('expenseClaims.unclaimButton')}
               </button>
               {userRole === 'manager' && claimsStatus[transaction.id] === 'pending' && (
                 <button onClick={() => handleApprove(transaction.id)} style={buttonStyle}>
-                  Approve
+                  {t('expenseClaims.approveButton')}
                 </button>
               )}
             </li>
           ))}
         </ul>
-      </div>
+  </div>
       
       <div style={sectionStyle}>
-        <h3>Pending Claims</h3>
+        <h3>{t('expenseClaims.pendingClaims')}</h3>
         <ul style={containerStyle}>
           {transactions.filter(transaction => claimsStatus[transaction.id] === 'pending').map((transaction) => (
             <li key={transaction.id} style={listItemStyle('pending')}>
-              <p>Date: {transaction.date}</p>
-              <p>Expense Name: {transaction.expenseName}</p>
-              <p>Expense Type: {transaction.expenseType}</p>
-              <p>Value: {transaction.value}</p>
+              <p>{t('expenseData.dateLabel')}: {transaction.date}</p>
+              <p>{t('expenseData.expenseNameLabel')}: {transaction.expenseName}</p>
+              <p>{t('expenseData.expenseTypeLabel')}: {transaction.expenseType}</p>
+              <p>{t('expenseData.valueLabel')}: {transaction.value}</p>
             </li>
           ))}
         </ul>
       </div>
 
+
       <div style={{...sectionStyle, minWidth: '30%', flex: '2'}}> {/* Adjusted for a potentially wider approved section */}
-        <h3>Approved Claims</h3>
-        <ul style={containerStyle}>
+      <h3>{t('expenseClaims.approvedClaims')}</h3> {/* Translate the section title */}
+      <ul style={containerStyle}>
           {transactions.filter(transaction => claimsStatus[transaction.id] === 'approved').map((transaction) => (
             <li key={transaction.id} style={listItemStyle('approved')}>
-              <p>Date: {transaction.date}</p>
-              <p>Expense Name: {transaction.expenseName}</p>
-              <p>Expense Type: {transaction.expenseType}</p>
-              <p>Value: {transaction.value}</p>
+                <p>{t('expenseData.dateLabel')}: {transaction.date}</p> {/* Translate date label */}
+                <p>{t('expenseData.expenseNameLabel')}: {transaction.expenseName}</p> {/* Translate expense name label */}
+                <p>{t('expenseData.expenseTypeLabel')}: {transaction.expenseType}</p> {/* Translate expense type label */}
+                <p>{t('expenseData.valueLabel')}: {transaction.value}</p> {/* Translate value label */}
             </li>
-          ))}
-        </ul>
-      </div>
+        ))}
+    </ul>
+  </div>
+
     </div>
   );
 };
-
-
 
 export default ExpenseClaims;

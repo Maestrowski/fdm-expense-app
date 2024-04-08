@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
-import './Export.css'; 
+import './Export.css';
+import { useTranslation } from 'react-i18next'; // Import useTranslation hook
 
 const Export = ({ receiptData }) => {
+  const { t } = useTranslation(); // Initialize useTranslation hook
+
   const [selectedFormat, setSelectedFormat] = useState('csv');
 
   const handleDownload = () => {
@@ -29,9 +32,9 @@ const Export = ({ receiptData }) => {
     link.setAttribute("href", encodedUri);
     link.setAttribute("download", `receipt.${fileExtension}`);
     document.body.appendChild(link);
-    
+
     link.click();
-    
+
     document.body.removeChild(link);
   };
 
@@ -42,15 +45,15 @@ const Export = ({ receiptData }) => {
   return (
     <div className="export-container">
       <div className="title-bar">
-        <h2 className="export-title">Download Receipt</h2>
+        <h2 className="export-title">{t('export.title')}</h2> {/* Translate title */}
         <select className="format-select" value={selectedFormat} onChange={(e) => setSelectedFormat(e.target.value)}>
-          <option value="csv">CSV</option>
-          <option value="json">JSON</option>
+          <option value="csv">{t('export.csvOption')}</option> {/* Translate CSV option */}
+          <option value="json">{t('export.jsonOption')}</option> {/* Translate JSON option */}
         </select>
-        <button className="export-button" onClick={handleDownload}>Download</button>
+        <button className="export-button" onClick={handleDownload}>{t('export.downloadButton')}</button> {/* Translate download button */}
       </div>
     </div>
   )
 }
 
-export default Export
+export default Export;

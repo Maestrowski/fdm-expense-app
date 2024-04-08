@@ -1,0 +1,77 @@
+{
+    "login": "登錄",
+    "addExpense": {
+      "title": "新增費用",
+      "dateLabel": "日期",
+      "datePlaceholder": "DD/MM/YYYY",
+      "expenseNameLabel": "費用名稱",
+      "expenseTypeLabel": "費用類型",
+      "valueLabel": "金額",
+      "submitButton": "提交",
+      "attachReceiptButton": "附上收據",
+      "expenseClaimButton": "費用索賠"
+    },
+    "leftBar": {
+      "addExpense": "新增費用",
+      "dashboard": "儀表板",
+      "expenseData": "費用數據",
+      "receipts": "收據",
+      "expenseClaims": "費用索賠",
+      "export": "導出",
+      "settings": "設置"
+    },
+    "expenseData": {
+      "title": "費用數據",
+      "dateLabel": "日期",
+      "expenseNameLabel": "費用名稱",
+      "expenseTypeLabel": "費用類型",
+      "valueLabel": "金額"
+    },
+    "receipts": {
+      "title": "收據",
+      "viewReceiptButton": "查看收據"
+    },
+    "expenseClaims": {
+      "title": "費用索賠",
+      "allExpenses": "所有費用",
+      "pendingClaims": "待處理索賠",
+      "approvedClaims": "已批准索賠",
+      "claimButton": "索賠",
+      "unclaimButton": "取消索賠",
+      "approveButton": "批准"
+    },
+    "export": {
+        "title": "下載收據",
+        "csvOption": "CSV",
+        "jsonOption": "JSON",
+        "downloadButton": "下載"
+    },
+    "settings": {
+        "title": "設置"
+    },
+    "popup": {
+        "contactUs": "聯繫我們",
+        "fullNameLabel": "全名",
+        "emailLabel": "電子郵件地址",
+        "messageLabel": "消息",
+        "sendButton": "發送"
+    },
+    "topBar": {
+        "loginSignup": "登錄 / 註冊"
+    },
+    "dashboard": {
+      "expenses": "支出",
+      "totalExpenses": "總支出",
+      "exchangeRates": "匯率",
+      "selectCurrency": "選擇貨幣",
+      "loading": "載入中...",
+      "loadExchangeRatesFailed": "匯率載入失敗。",
+      "targetCurrencyNotAvailable": "目標貨幣不在匯率中。",
+      "expensesByCategory": "按類別支出",
+      "baseCurrency": "基準：{{baseCurrency}}，金額：{{total}}，目標：{{targetCurrency}}",
+      "transaction": {
+        "expenseName": "支出名稱",
+        "expenseType": "支出類型"
+      }
+    }
+}

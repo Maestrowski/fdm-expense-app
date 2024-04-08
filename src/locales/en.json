@@ -1,0 +1,78 @@
+{
+    "login": "Login",
+    "addExpense": {
+      "title": "Add Expense",
+      "dateLabel": "Date",
+      "datePlaceholder": "DD/MM/YYYY",
+      "expenseNameLabel": "Expense Name",
+      "expenseTypeLabel": "Expense Type",
+      "valueLabel": "Value",
+      "submitButton": "Submit",
+      "attachReceiptButton": "Attach Receipt",
+      "expenseClaimButton": "Expense Claim"
+    },
+    "leftBar": {
+      "addExpense": "Add Expense",
+      "dashboard": "Dashboard",
+      "expenseData": "Expense Data",
+      "receipts": "Receipts",
+      "expenseClaims": "Expense Claims",
+      "export": "Export",
+      "settings": "Settings"
+    },
+    "expenseData": {
+      "title": "Expense Data",
+      "dateLabel": "Date",
+      "expenseNameLabel": "Expense Name",
+      "expenseTypeLabel": "Expense Type",
+      "valueLabel": "Value"
+    },
+    "receipts": {
+      "title": "Receipts",
+      "viewReceiptButton": "View Receipt"
+    },
+    "expenseClaims": {
+      "title": "Expense Claims",
+      "allExpenses": "All Expenses",
+      "pendingClaims": "Pending Claims",
+      "approvedClaims": "Approved Claims",
+      "claimButton": "Claim",
+      "unclaimButton": "Unclaim",
+      "approveButton": "Approve"
+    },
+    "export": {
+        "title": "Download Receipt",
+        "csvOption": "CSV",
+        "jsonOption": "JSON",
+        "downloadButton": "Download"
+    },
+    "settings": {
+        "title": "Settings"
+    },
+    "popup": {
+        "contactUs": "Contact Us",
+        "fullNameLabel": "Full Name",
+        "emailLabel": "Email Address",
+        "messageLabel": "Message",
+        "sendButton": "Send"
+    },
+    "topBar": {
+        "loginSignup": "Login / Sign up"
+    },
+    "dashboard": {
+      "expenses": "Expenses",
+      "totalExpenses": "Total Expenses",
+      "exchangeRates": "Exchange Rates",
+      "selectCurrency": "Select a currency",
+      "loading": "Loading...",
+      "loadExchangeRatesFailed": "Failed to load exchange rates.",
+      "targetCurrencyNotAvailable": "Target currency not available in rates.",
+      "expensesByCategory": "Expenses by Category",
+      "baseCurrency": "Base: {{baseCurrency}}, Amount: {{total}}, Target: {{targetCurrency}}",
+      "transaction": {
+        "expenseName": "Expense Name",
+        "expenseType": "Expense Type"
+      }
+    }
+    
+}
