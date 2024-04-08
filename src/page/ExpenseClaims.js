@@ -52,19 +52,18 @@ const ExpenseClaims = () => {
     padding: 0,
   };
 
-  // New style for the main layout container
+  //  style for the main layout container
   const mainLayoutStyle = {
     display: 'flex',
     justifyContent: 'space-between',
-    gap: '20px', // Adjust this value as needed for spacing between sections
+    gap: '20px',
   };
 
-  // Style adjustments for side-by-side sections
+  // style for side by-side sections
   const sectionStyle = {
     flex: 1,
-    minWidth: '30%', // Ensure sections don't get too narrow; adjust as needed
+    minWidth: '30%',
   };
-
   return (
     <div style={mainLayoutStyle}>
       <div style={sectionStyle}>
@@ -89,7 +88,6 @@ const ExpenseClaims = () => {
           ))}
         </ul>
       </div>
-      
       <div style={sectionStyle}>
         <h3>Pending Claims</h3>
         <ul style={containerStyle}>
@@ -103,8 +101,7 @@ const ExpenseClaims = () => {
           ))}
         </ul>
       </div>
-
-      <div style={{...sectionStyle, minWidth: '30%', flex: '2'}}> {/* Adjusted for a potentially wider approved section */}
+      <div style={{ ...sectionStyle, minWidth: '30%', flex: '2' }}>
         <h3>Approved Claims</h3>
         <ul style={containerStyle}>
           {transactions.filter(transaction => claimsStatus[transaction.id] === 'approved').map((transaction) => (
@@ -120,5 +117,4 @@ const ExpenseClaims = () => {
     </div>
   );
 };
-
 export default ExpenseClaims;

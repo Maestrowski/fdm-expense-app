@@ -5,6 +5,7 @@ import LeftBar from './components/LeftBar';
 import Chatbox from './components/Chatbox';
 import Popup from './components/Popup';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Dashboard from './page/Dashboard';
 import AddExpense from './page/AddExpense';
 import ExpenseData from './page/ExpenseData';
 import Receipts from './page/Receipts';
@@ -42,6 +43,7 @@ function App() {
         <div className='main-content'>
         <Routes> {/* Define routes inside the Switch component */}
           <Route path='/' element={<div></div>}/>
+          <Route path="/dashboard" element={<Dashboard />}/>
           <Route path="/add-expense" element={<AddExpense />} />{' '} 
           <Route path="/expense-data" element={<ExpenseData />} />{' '} 
           <Route path="/receipts" element={<Receipts />} />{' '}
