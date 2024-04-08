@@ -1,0 +1,77 @@
+{
+    "login": "Connexion",
+    "addExpense": {
+      "title": "Ajouter une dépense",
+      "dateLabel": "Date",
+      "datePlaceholder": "JJ/MM/AAAA",
+      "expenseNameLabel": "Nom de la dépense",
+      "expenseTypeLabel": "Type de dépense",
+      "valueLabel": "Montant",
+      "submitButton": "Soumettre",
+      "attachReceiptButton": "Joindre un reçu",
+      "expenseClaimButton": "Demande de remboursement"
+    },
+    "leftBar": {
+      "addExpense": "Ajouter une dépense",
+      "dashboard": "Tableau de bord",
+      "expenseData": "Données de dépense",
+      "receipts": "Reçus",
+      "expenseClaims": "Demandes de remboursement",
+      "export": "Exporter",
+      "settings": "Paramètres"
+    },
+    "expenseData": {
+      "title": "Données de dépense",
+      "dateLabel": "Date",
+      "expenseNameLabel": "Nom de la dépense",
+      "expenseTypeLabel": "Type de dépense",
+      "valueLabel": "Montant"
+    },
+    "receipts": {
+      "title": "Reçus",
+      "viewReceiptButton": "Voir le reçu"
+    },
+    "expenseClaims": {
+      "title": "Demandes de remboursement",
+      "allExpenses": "Toutes les dépenses",
+      "pendingClaims": "Demandes en attente",
+      "approvedClaims": "Demandes approuvées",
+      "claimButton": "Demander",
+      "unclaimButton": "Annuler la demande",
+      "approveButton": "Approuver"
+    },
+    "export": {
+        "title": "Télécharger le reçu",
+        "csvOption": "CSV",
+        "jsonOption": "JSON",
+        "downloadButton": "Télécharger"
+    },
+    "settings": {
+        "title": "Paramètres"
+    },
+    "popup": {
+        "contactUs": "Contactez-nous",
+        "fullNameLabel": "Nom complet",
+        "emailLabel": "Adresse e-mail",
+        "messageLabel": "Message",
+        "sendButton": "Envoyer"
+    },
+    "topBar": {
+        "loginSignup": "Connexion / Inscription"
+    },
+    "dashboard": {
+      "expenses": "Dépenses",
+      "totalExpenses": "Total des dépenses",
+      "exchangeRates": "Taux de change",
+      "selectCurrency": "Sélectionnez une devise",
+      "loading": "Chargement...",
+      "loadExchangeRatesFailed": "Échec du chargement des taux de change.",
+      "targetCurrencyNotAvailable": "La devise cible n'est pas disponible dans les taux.",
+      "expensesByCategory": "Dépenses par catégorie",
+      "baseCurrency": "Base: {{baseCurrency}}, Montant: {{total}}, Cible: {{targetCurrency}}",
+      "transaction": {
+        "expenseName": "Nom de la dépense",
+        "expenseType": "Type de dépense"
+      }
+    }
+}
