@@ -173,7 +173,7 @@ button {
   width: 24px;
 }
 
-/* Dropdown Styles */
+/* currency convert style section */
 .currency-dropdown,.convert-button {
     background-color: var(--clr-jet); 
     color: var(--clr-silver-v1); 
@@ -188,7 +188,6 @@ button {
     cursor: pointer; 
   }
   
-  
   .currency-dropdown:hover,
   .currency-dropdown:focus {
     border-color: var(--clr-pumpkin); 
@@ -196,16 +195,4 @@ button {
   }
   
   
-  .currency-dropdown::-ms-expand {
-    display: none; 
-  }
-  .currency-dropdown::after {
-    content: "▼"; 
-    font-size: 12px; 
-    color: var(--clr-white); 
-    right: 15px; 
-    top: 18px; 
-    position: absolute; 
-    pointer-events: none; 
-  }
   
