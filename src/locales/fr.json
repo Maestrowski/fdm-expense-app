@@ -42,9 +42,7 @@
     },
     "export": {
         "title": "Télécharger le reçu",
-        "csvOption": "CSV",
-        "jsonOption": "JSON",
-        "downloadButton": "Télécharger"
+        "downloadButton": "Télécharger CSV"
     },
     "settings": {
         "title": "Paramètres"

@@ -42,9 +42,7 @@
     },
     "export": {
         "title": "Beleg herunterladen",
-        "csvOption": "CSV",
-        "jsonOption": "JSON",
-        "downloadButton": "Herunterladen"
+        "downloadButton": "Herunterladen CSV"
     },
     "settings": {
         "title": "Einstellungen"

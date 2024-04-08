@@ -1,56 +1,47 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Export.css';
 import { useTranslation } from 'react-i18next'; // Import useTranslation hook
 
-const Export = ({ receiptData }) => {
+const Export = () => {
   const { t } = useTranslation(); // Initialize useTranslation hook
 
-  const [selectedFormat, setSelectedFormat] = useState('csv');
-
   const handleDownload = () => {
-    let formattedData;
-    let mimeType;
-    let fileExtension;
+    const transactions = [];
+    const transactionElements = document.querySelectorAll('.transaction');
 
-    switch (selectedFormat) {
-      case 'csv':
-        formattedData = convertToCSV(receiptData);
-        mimeType = 'text/csv';
-        fileExtension = 'csv';
-        break;
-      case 'json':
-        formattedData = JSON.stringify(receiptData, null, 2);
-        mimeType = 'application/json';
-        fileExtension = 'json';
-        break;
-      default:
-        return;
-    }
+    transactionElements.forEach(element => {
+      const date = element.querySelector('p:nth-child(1)').textContent.split(': ')[1];
+      const expenseName = element.querySelector('p:nth-child(2)').textContent.split(': ')[1];
+      const expenseType = element.querySelector('p:nth-child(3)').textContent.split(': ')[1];
+      const value = element.querySelector('p:nth-child(4)').textContent.split(': ')[1];
 
-    const encodedUri = encodeURI(`data:${mimeType};charset=utf-8,${formattedData}`);
+      transactions.push({ date, expenseName, expenseType, value });
+    });
+
+    const csv = convertToCSV(transactions);
+    const encodedUri = encodeURI(`data:text/csv;charset=utf-8,${csv}`);
     const link = document.createElement("a");
     link.setAttribute("href", encodedUri);
-    link.setAttribute("download", `receipt.${fileExtension}`);
+    link.setAttribute("download", "expense_data.csv");
     document.body.appendChild(link);
-
     link.click();
-
     document.body.removeChild(link);
   };
 
   const convertToCSV = (data) => {
-    return data.map(row => row.join(",")).join("\n");
+    let csv = 'Date,Expense Name,Expense Type,Value\n';
+    data.forEach(transaction => {
+      const row = `${transaction.date},${transaction.expenseName},${transaction.expenseType},${transaction.value}`;
+      csv += row + '\n';
+    });
+    return csv;
   };
 
   return (
     <div className="export-container">
       <div className="title-bar">
         <h2 className="export-title">{t('export.title')}</h2> {/* Translate title */}
-        <select className="format-select" value={selectedFormat} onChange={(e) => setSelectedFormat(e.target.value)}>
-          <option value="csv">{t('export.csvOption')}</option> {/* Translate CSV option */}
-          <option value="json">{t('export.jsonOption')}</option> {/* Translate JSON option */}
-        </select>
-        <button className="export-button" onClick={handleDownload}>{t('export.downloadButton')}</button> {/* Translate download button */}
+        <button className="export-button" onClick={handleDownload}>{t('export.downloadButton')}</button>
       </div>
     </div>
   )

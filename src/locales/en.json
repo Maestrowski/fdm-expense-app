@@ -42,9 +42,7 @@
     },
     "export": {
         "title": "Download Receipt",
-        "csvOption": "CSV",
-        "jsonOption": "JSON",
-        "downloadButton": "Download"
+        "downloadButton": "Download CSV"
     },
     "settings": {
         "title": "Settings"
