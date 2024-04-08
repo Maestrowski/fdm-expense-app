@@ -58,13 +58,13 @@ const ExpenseClaims = () => {
   const mainLayoutStyle = {
     display: 'flex',
     justifyContent: 'space-between',
-    gap: '20px', // Adjust this value as needed for spacing between sections
+    gap: '20px', 
   };
 
   // Style adjustments for side-by-side sections
   const sectionStyle = {
     flex: 1,
-    minWidth: '30%', // Ensure sections don't get too narrow; adjust as needed
+    minWidth: '30%', 
   };
 
   return (
@@ -90,7 +90,7 @@ const ExpenseClaims = () => {
             </li>
           ))}
         </ul>
-  </div>
+      </div>
       
       <div style={sectionStyle}>
         <h3>{t('expenseClaims.pendingClaims')}</h3>
@@ -107,8 +107,8 @@ const ExpenseClaims = () => {
       </div>
 
 
-      <div style={{...sectionStyle, minWidth: '30%', flex: '2'}}> {/* Adjusted for a potentially wider approved section */}
-      <h3>{t('expenseClaims.approvedClaims')}</h3> {/* Translate the section title */}
+      <div style={{...sectionStyle, minWidth: '30%', flex: '2'}}> 
+      <h3>{t('expenseClaims.approvedClaims')}</h3>
       <ul style={containerStyle}>
           {transactions.filter(transaction => claimsStatus[transaction.id] === 'approved').map((transaction) => (
             <li key={transaction.id} style={listItemStyle('approved')}>
@@ -118,8 +118,8 @@ const ExpenseClaims = () => {
                 <p>{t('expenseData.valueLabel')}: {transaction.value}</p> {/* Translate value label */}
             </li>
         ))}
-    </ul>
-  </div>
+      </ul>
+    </div>
 
     </div>
   );
