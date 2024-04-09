@@ -3,10 +3,8 @@ import { useTranslation } from 'react-i18next'; // Import the useTranslation hoo
 import { auth } from "../firebase";
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { Link } from "react-router-dom";
-import { SignUp } from "./SignUp";
-import AuthDetails from "./AuthDetails";
 
-const Login = (props) => {
+const Login = () => {
   const { t } = useTranslation(); // Destructure t function from useTranslation
 
   const [email, setEmail] = useState('');
