@@ -1,42 +1,44 @@
-/* ExpenseData.css */
-
 .exp-container {
-    padding: 20px;
-    background-color: #f5f5f5;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .exp-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .exp-list {
-    list-style-type: none;
-    padding: 12px 16px;
-    background-color: white;
-    border-radius: 6px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    margin-bottom: 16px;
-    transition: transform 0.2s ease-in-out;
-  }
-  
-  .exp-list:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .exp-list p {
-    margin: 4px 0;
-    font-size: 16px;
-  }
-  
-  .exp-list p:first-child {
-    font-weight: 500;
-  }
-  
-  .exp-list p:last-child {
-    font-weight: 500;
-  }
+  background-color: var(--clr-primary);
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 8px 24px;
+  color: var(--clr-white);
+  padding: 24px;
+  margin-bottom: 30px;
+}
+
+.exp-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.exp-list {
+  background-color: var(--clr-jet);
+  border-radius: 8px;
+  box-shadow: none;
+  margin-bottom: 16px;
+  padding: 16px;
+  transition: var(--transition-default);
+}
+
+.exp-list:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.exp-list p {
+  margin: 4px 0;
+  font-size: 16px;
+  color: var(--clr-silver-v1);
+}
+
+.exp-list p:first-child {
+  font-weight: 500;
+  color: var(--clr-white);
+}
+
+.exp-list p:last-child {
+  font-weight: 500;
+  color: #05fb05;
+}
