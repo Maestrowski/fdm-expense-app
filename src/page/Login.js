@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next'; // Import the useTranslation hoo
 import { auth } from "../firebase";
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { Link } from "react-router-dom";
-import AuthDetails from "./AuthDetails";
 
 const Login = () => {
   const { t } = useTranslation(); // Destructure t function from useTranslation
@@ -22,8 +21,18 @@ const Login = () => {
   };
 
   return (
-    <div>
-      Login
+    <div className="auth-form-container">
+        <h2>{"Login"}</h2>
+        <form className="login-form" onSubmit={login}>
+            <label htmlFor="email">email</label>
+            <input value={email} onChange={(e) => setEmail(e.target.value)}type="email" placeholder="youremail@gmail.com" id="email" name="email" />
+            <label htmlFor="password">password</label>
+            <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" placeholder="********" id="password" name="password" />
+            <button type="submit">Log In</button>
+        </form>
+        <Link to="../signup">
+          <button className="link-btn">{"Don't have an account? Register here."}</button>
+        </Link>
     </div>
   );
 };
