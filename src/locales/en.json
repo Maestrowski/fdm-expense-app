@@ -38,7 +38,9 @@
       "approvedClaims": "Approved Claims",
       "claimButton": "Claim",
       "unclaimButton": "Unclaim",
-      "approveButton": "Approve"
+      "approveButton": "Approve",
+      "noExpensesMessage": "No expenses can be claimed yet, add expenses in the 'Add expense tab'"
+
     },
     "export": {
         "title": "Download Receipt",

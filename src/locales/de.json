@@ -38,7 +38,9 @@
       "approvedClaims": "Genehmigte Anträge",
       "claimButton": "Beantragen",
       "unclaimButton": "Antrag zurückziehen",
-      "approveButton": "Genehmigen"
+      "approveButton": "Genehmigen",
+      "noExpensesMessage" : "Es können noch keine Ausgaben geltend gemacht werden. Fügen Sie Ausgaben im Register 'Ausgaben hinzufügen' hinzu."
+
     },
     "export": {
         "title": "Beleg herunterladen",
