@@ -36,7 +36,7 @@ const ExpenseClaims = () => {
       <div className="section">
         <h2>{t('expenseClaims.title')}</h2>
         <h3>{t('expenseClaims.allExpenses')}</h3>
-        <ul className="container">
+        <ul className="claim-container">
           {transactions.length === 0 ? (
                 <p>{t('expenseClaims.noExpensesMessage')}</p>
                 ) : (
