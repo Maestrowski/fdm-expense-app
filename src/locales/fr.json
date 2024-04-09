@@ -38,7 +38,8 @@
       "approvedClaims": "Demandes approuvées",
       "claimButton": "Demander",
       "unclaimButton": "Annuler la demande",
-      "approveButton": "Approuver"
+      "approveButton": "Approuver",
+      "noExpensesMessage" : "Aucune dépense ne peut être réclamée pour l'instant, ajoutez des dépenses dans l'onglet 'Ajouter une dépense'."
     },
     "export": {
         "title": "Télécharger le reçu",

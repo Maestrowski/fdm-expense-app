@@ -38,7 +38,9 @@
       "approvedClaims": "已批准索賠",
       "claimButton": "索賠",
       "unclaimButton": "取消索賠",
-      "approveButton": "批准"
+      "approveButton": "批准",
+      "noExpensesMessage" : "目前无法报销费用，请在“添加费用”标签中添加费用。"
+
     },
     "export": {
         "title": "下載收據",
