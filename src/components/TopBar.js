@@ -1,5 +1,7 @@
 import React from 'react';
 import {Link} from "react-router-dom";
+import AuthDetails from "../page/AuthDetails";
+import "../page/SignUp.css";
 import { useTranslation } from 'react-i18next'; // Import useTranslation hook
 
 
@@ -12,6 +14,9 @@ const TopBar = ({ onSlideIconClick, openLeftBar }) => {
     <div className={navbarClass}>
       <div className='slide-icon' onClick={onSlideIconClick}>
         <img src={`icons/Slide.png`} alt="Slide Icon" />
+      </div>
+      <div class="sign-in-status">
+        <AuthDetails />
       </div>
       <Link to="login">
       <div className='login-btn'>

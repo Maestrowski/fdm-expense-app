@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { auth } from "../firebase";
 import { createUserWithEmailAndPassword } from 'firebase/auth';
-import AuthDetails from "./AuthDetails";
 
 const SignUp = () => {
   const [email, setEmail] = useState('');
@@ -35,7 +34,6 @@ const SignUp = () => {
         ></input>
         <button type="submit">Register</button>
       </form> 
-      <AuthDetails />
     </div>
   );
 };
