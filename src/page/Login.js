@@ -22,7 +22,7 @@ const Login = () => {
 
   return (
     <div className="auth-form-container">
-        <h2>{t("Login")}</h2>
+        <h2>{"Login"}</h2>
         <form className="login-form" onSubmit={login}>
             <label htmlFor="email">email</label>
             <input value={email} onChange={(e) => setEmail(e.target.value)}type="email" placeholder="youremail@gmail.com" id="email" name="email" />
@@ -31,7 +31,7 @@ const Login = () => {
             <button type="submit">Log In</button>
         </form>
         <Link to="../signup">
-          <button className="link-btn">{t("Don't have an account? Register here.")}</button>
+          <button className="link-btn">{"Don't have an account? Register here."}</button>
         </Link>
     </div>
   );
