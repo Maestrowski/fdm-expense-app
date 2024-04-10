@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 import { auth } from "../firebase";
 import { createUserWithEmailAndPassword } from 'firebase/auth';
+import "../page/SignUp.css";
+import { useTranslation } from 'react-i18next'; // Import the useTranslation hook;
 
 const SignUp = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  const { t } = useTranslation(); // Destructure t function from useTranslation
 
   const register = (e) => {
     e.preventDefault();
@@ -19,20 +23,20 @@ const SignUp = () => {
   return (
     <div className="sign-in-container">
       <form onSubmit={register}>
-        <h1>Create an Account</h1>
+        <h1>{t("register.registerTitle")}</h1>
         <input 
           type="email" 
-          placeholder="Email" 
+          placeholder={t("register.placeholderEmail")}
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         ></input>
         <input 
           type="password" 
-          placeholder="Password" 
+          placeholder={t("register.placeholderPassword")}
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         ></input>
-        <button type="submit">Register</button>
+        <button type="submit">{t("register.buttonRegister")}</button>
       </form> 
     </div>
   );

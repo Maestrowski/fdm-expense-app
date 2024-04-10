@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next'; // Import the useTranslation hook;
 import { auth } from "../firebase";
 import { signInWithEmailAndPassword } from 'firebase/auth';
+import "../page/Login.css";
 import { Link } from "react-router-dom";
 
 const Login = () => {
@@ -22,16 +23,16 @@ const Login = () => {
 
   return (
     <div className="auth-form-container">
-        <h2>{"Login"}</h2>
+        <h2>{t("login.loginTitle")}</h2>
         <form className="login-form" onSubmit={login}>
-            <label htmlFor="email">email</label>
-            <input value={email} onChange={(e) => setEmail(e.target.value)}type="email" placeholder="youremail@gmail.com" id="email" name="email" />
-            <label htmlFor="password">password</label>
+            <label htmlFor="email">{t("login.emailLabel")}</label>
+            <input value={email} onChange={(e) => setEmail(e.target.value)}type="email" placeholder={t("login.placeholderEmail")} id="email" name="email" />
+            <label htmlFor="password">{t("login.passwordLabel")}</label>
             <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" placeholder="********" id="password" name="password" />
-            <button type="submit">Log In</button>
+            <button type="submit">{t("login.buttonLogin")}</button>
         </form>
         <Link to="../signup">
-          <button className="link-btn">{"Don't have an account? Register here."}</button>
+          <button className="link-btn">{t("login.registerMessage")}</button>
         </Link>
     </div>
   );

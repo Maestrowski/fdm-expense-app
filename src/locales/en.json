@@ -1,5 +1,18 @@
 {
-    "login": "Login",
+    "login": {
+      "loginTitle": "Login",
+      "emailLabel": "Email",
+      "placeholderEmail": "youremail@gmail.com",
+      "passwordLabel": "Password",
+      "buttonLogin": "Log in",
+      "registerMessage": "Don't have an account? Register here."
+    },
+    "register": {
+      "registerTitle": "Create an Account",
+      "placeholderEmail": "email",
+      "placeholderPassword": "password",
+      "buttonRegister": "Register"
+    },
     "addExpense": {
       "title": "Add Expense",
       "dateLabel": "Date",
@@ -73,6 +86,12 @@
         "expenseName": "Expense Name",
         "expenseType": "Expense Type"
       }
+    },
+    "authDetails": {
+      "signOutConsole": "sign out successful",
+      "signInStatus": "Signed In as",
+      "signOutClick": "Sign Out",
+      "signOutMessage": "Signed Out"
     }
     
 }

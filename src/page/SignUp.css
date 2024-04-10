@@ -2,3 +2,10 @@
 .sign-in-status {
     color: white;
 }
+
+/* Sign in CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}

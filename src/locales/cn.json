@@ -1,5 +1,18 @@
 {
-    "login": "登錄",
+    "login": {
+      "loginTitle": "登录",
+      "emailLabel": "电子邮件",
+      "placeholderEmail": "你的邮件@gmail.com",
+      "passwordLabel": "密码",
+      "buttonLogin": "登录",
+      "registerMessage": "没有帐户？在这里注册。"
+    },
+    "register": {
+      "registerTitle": "创建一个帐户",
+      "placeholderEmail": "电子邮件",
+      "placeholderPassword": "密码",
+      "buttonRegister": "登记"
+    },
     "addExpense": {
       "title": "新增費用",
       "dateLabel": "日期",
@@ -73,5 +86,11 @@
         "expenseName": "支出名稱",
         "expenseType": "支出類型"
       }
+    },
+    "authDetails": {
+      "signOutConsole": "注销成功",
+      "signInStatus": "登录身份",
+      "signOutClick": "登出",
+      "signOutMessage": "退出"
     }
 }

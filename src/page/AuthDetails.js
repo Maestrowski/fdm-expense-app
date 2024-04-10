@@ -1,8 +1,11 @@
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import React, { useEffect, useState } from "react";
 import { auth } from "../firebase";
+import { useTranslation } from 'react-i18next'; // Import the useTranslation hook;
 
 const AuthDetails = () => {
+    const { t } = useTranslation(); // Destructure t function from useTranslation
+
     const [authUser, setAuthUser] = useState(null);
 
     useEffect(() => {
@@ -22,7 +25,7 @@ const AuthDetails = () => {
     const userSignOut = () => {
     signOut(auth)
         .then(() => {
-        console.log("sign out successful");
+        console.log(t("authDetails.signOutConsole"));
         })
         .catch((error) => console.log(error));
     };
@@ -31,11 +34,11 @@ const AuthDetails = () => {
     <div>
         {authUser ? (
         <>
-            <p>{`Signed In as ${authUser.email}`}</p>
-            <button onClick={userSignOut}>Sign Out</button>
+            <p>{t("authDetails.signInStatus")} {authUser.email}</p>
+            <button onClick={userSignOut}>{t("authDetails.signOutClick")}</button>
         </>
         ) : (
-        <p>Signed Out</p>
+        <p>{t("authDetails.signOutMessage")}</p>
         )}
     </div>
     );

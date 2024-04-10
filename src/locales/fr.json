@@ -1,5 +1,18 @@
 {
-    "login": "Connexion",
+    "login": {
+      "loginTitle": "Connexion",
+      "emailLabel": "e-mail",
+      "placeholderEmail": "votreemail@gmail.com",
+      "passwordLabel": "Mot de passe",
+      "buttonLogin": "Se connecter",
+      "registerMessage": "Vous n'avez pas de compte ? Inscrivez-vous ici."
+    },
+    "register": {
+      "registerTitle": "Créer un compte",
+      "placeholderEmail": "e-mail",
+      "placeholderPassword": "mot de passe",
+      "buttonRegister": "Registre"
+    },
     "addExpense": {
       "title": "Ajouter une dépense",
       "dateLabel": "Date",
@@ -72,5 +85,11 @@
         "expenseName": "Nom de la dépense",
         "expenseType": "Type de dépense"
       }
+    },
+    "authDetails": {
+      "signOutConsole": "Déconnexion réussie",
+      "signInStatus": "Connecté en tant que",
+      "signOutClick": "Se déconnecter",
+      "signOutMessage": "Déconnecté"
     }
 }

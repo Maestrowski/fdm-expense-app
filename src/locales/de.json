@@ -1,5 +1,18 @@
 {
-    "login": "Anmelden",
+    "login": {
+      "loginTitle": "Anmeldung",
+      "emailLabel": "Email",
+      "placeholderEmail": "deineeMail@gmail.com",
+      "passwordLabel": "Passwort",
+      "buttonLogin": "Anmeldung",
+      "registerMessage": "Sie haben noch kein Konto? Hier registrieren."
+    },
+    "register": {
+      "registerTitle": "Ein Konto erstellen",
+      "placeholderEmail": "email",
+      "placeholderPassword": "passwort",
+      "buttonRegister": "Registrieren"
+    },
     "addExpense": {
       "title": "Ausgabe hinzufügen",
       "dateLabel": "Datum",
@@ -73,5 +86,11 @@
         "expenseName": "Name der Ausgabe",
         "expenseType": "Art der Ausgabe"
       }
+    },
+    "authDetails": {
+      "signOutConsole": "Abmeldung erfolgreich",
+      "signInStatus": "Eingeloggt als",
+      "signOutClick": "Abmelden",
+      "signOutMessage": "Abgemeldet"
     }
 }
