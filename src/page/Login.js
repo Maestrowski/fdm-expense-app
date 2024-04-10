@@ -17,6 +17,7 @@ const Login = () => {
       .then((userCredential) => {
         console.log(userCredential)
       }).catch((error) => {
+        alert("Incorrect email/password")
         console.log(error);
     })
   };
@@ -47,8 +48,11 @@ const Login = () => {
             />
             <button className="login-btn" type="submit">{t("login.buttonLogin")}</button>
         </form>
+        <Link to="../forgot-password">
+          <button className="reset-link-btn">{t("login.forgotPasswordMessage")}</button>
+        </Link><br></br>
         <Link to="../signup">
-          <button className="link-btn">{t("login.registerMessage")}</button>
+          <button className="register-link-btn">{t("login.registerMessage")}</button>
         </Link>
     </div>
   );

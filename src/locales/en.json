@@ -5,6 +5,7 @@
       "placeholderEmail": "youremail@gmail.com",
       "passwordLabel": "Password",
       "buttonLogin": "Log in",
+      "forgotPasswordMessage": "Forgot Password? Click here.",
       "registerMessage": "Don't have an account? Register here."
     },
     "register": {
@@ -99,6 +100,10 @@
       "signInStatus": "Signed In as",
       "signOutClick": "Sign Out",
       "signOutMessage": "Signed Out"
+    },
+    "forgotPassword": {
+      "resetTitle": "Forgot Password",
+      "resetText": "Reset"
     }
     
 }

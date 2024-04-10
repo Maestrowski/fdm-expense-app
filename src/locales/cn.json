@@ -5,6 +5,7 @@
       "placeholderEmail": "你的邮件@gmail.com",
       "passwordLabel": "密码",
       "buttonLogin": "登录",
+      "forgotPasswordMessage": "忘记密码？点击这里。",
       "registerMessage": "没有帐户？在这里注册。"
     },
     "register": {
@@ -99,5 +100,9 @@
       "signInStatus": "登录身份",
       "signOutClick": "登出",
       "signOutMessage": "退出"
+    },
+    "forgotPassword": {
+      "resetTitle": "忘记密码",
+      "resetText": "重置"
     }
 }

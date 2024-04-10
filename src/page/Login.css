@@ -35,6 +35,14 @@
     margin-bottom: 30px;
 }
 
-.link-btn {
+.reset-link-btn {
     color: var(--clr-white);
+}
+
+.register-link-btn {
+    color: var(--clr-white);
+}
+
+button.login-btn {
+    color: var(--clr-black);
 }

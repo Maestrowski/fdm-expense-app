@@ -14,6 +14,7 @@ import Export from './page/Export';
 import Settings from './page/Settings';
 import Login from './page/Login';
 import SignUp from './page/SignUp';
+import ForgotPassword from './page/ForgotPassword';
 import {GlobalProvider} from './context/GlobalState';
 
 
@@ -53,6 +54,7 @@ function App() {
           <Route path="/settings" element={<Settings />} />{' '}
           <Route path="/login" element={<Login />} />{' '}
           <Route path="/signup" element={<SignUp />} />{' '}
+          <Route path="/forgot-password" element={<ForgotPassword />} />{' '}
         </Routes>
         </div>
         <TopBar onSlideIconClick={handleSlideIconClick} openLeftBar={openLeftBar}/>
