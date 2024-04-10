@@ -60,7 +60,11 @@
         "downloadButton": "Download CSV"
     },
     "settings": {
-        "title": "Settings"
+        "title": "Settings",
+        "accountDetails": "Account Details",
+        "accountEmail": "Your Email",
+        "accountPassword": "Your password",
+        "accountNotFound": "No user signed in"
     },
     "popup": {
         "contactUs": "Contact Us",

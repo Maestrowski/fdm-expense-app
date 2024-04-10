@@ -60,7 +60,11 @@
         "downloadButton": "下载 CSV 文件"
     },
     "settings": {
-        "title": "設置"
+        "title": "設置",
+        "accountDetails": "帐户详细资料",
+        "accountEmail": "你的邮件",
+        "accountPassword": "你的密码",
+        "accountNotFound": "没有用户登录"
     },
     "popup": {
         "contactUs": "聯繫我們",

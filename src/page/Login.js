@@ -26,10 +26,26 @@ const Login = () => {
         <h2>{t("login.loginTitle")}</h2>
         <form className="login-form" onSubmit={login}>
             <label htmlFor="email">{t("login.emailLabel")}</label>
-            <input value={email} onChange={(e) => setEmail(e.target.value)}type="email" placeholder={t("login.placeholderEmail")} id="email" name="email" />
+            <input 
+              value={email} 
+              onChange={(e) => setEmail(e.target.value)}
+              type="email" 
+              placeholder={t("login.placeholderEmail")} 
+              id="email" 
+              name="email" 
+              required
+            />
             <label htmlFor="password">{t("login.passwordLabel")}</label>
-            <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" placeholder="********" id="password" name="password" />
-            <button type="submit">{t("login.buttonLogin")}</button>
+            <input 
+              value={password} 
+              onChange={(e) => setPassword(e.target.value)} 
+              type="password" 
+              placeholder="********" 
+              id="password" 
+              name="password" 
+              required
+            />
+            <button className="login-btn" type="submit">{t("login.buttonLogin")}</button>
         </form>
         <Link to="../signup">
           <button className="link-btn">{t("login.registerMessage")}</button>

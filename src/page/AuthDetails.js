@@ -35,7 +35,7 @@ const AuthDetails = () => {
         {authUser ? (
         <>
             <p>{t("authDetails.signInStatus")} {authUser.email}</p>
-            <button onClick={userSignOut}>{t("authDetails.signOutClick")}</button>
+            <button className="sign-out-btn-text" onClick={userSignOut}>{t("authDetails.signOutClick")}</button>
         </>
         ) : (
         <p>{t("authDetails.signOutMessage")}</p>

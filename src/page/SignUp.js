@@ -29,12 +29,14 @@ const SignUp = () => {
           placeholder={t("register.placeholderEmail")}
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          required
         ></input>
         <input 
           type="password" 
           placeholder={t("register.placeholderPassword")}
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          required
         ></input>
         <button type="submit">{t("register.buttonRegister")}</button>
       </form> 
@@ -42,4 +44,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp
+export default SignUp;
