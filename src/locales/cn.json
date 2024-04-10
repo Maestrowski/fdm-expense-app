@@ -70,6 +70,9 @@
         "contactUs": "聯繫我們",
         "fullNameLabel": "全名",
         "emailLabel": "電子郵件地址",
+        "selectRecipient" : "选择收件人",
+        "lineManager" : "线路经理",
+        "systemAdministrator" : "系统管理员",
         "messageLabel": "消息",
         "sendButton": "發送"
     },

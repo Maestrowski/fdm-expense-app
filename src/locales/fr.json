@@ -69,6 +69,9 @@
         "contactUs": "Contactez-nous",
         "fullNameLabel": "Nom complet",
         "emailLabel": "Adresse e-mail",
+        "selectRecipient" : "Sélectionner le destinatairet",
+        "lineManager" : "Responsable hiérarchique",
+        "systemAdministrator" : "Administrateur système",
         "messageLabel": "Message",
         "sendButton": "Envoyer"
     },

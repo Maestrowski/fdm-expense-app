@@ -91,11 +91,10 @@ const AddExpense = () => {
                     <div className='form-group'>
                         <label htmlFor='Value'>{t('addExpense.valueLabel')}:</label> {/* Translate label */}
                         <input
-                            type="text"
+                            type="number"
                             id="value"
                             value={value}
                             onChange={(e) => setValue(e.target.value)}
-                            pattern="^\d+(\.\d+)?$"
                             title={t('addExpense.valueValidationMessage')}
                             required
                         />

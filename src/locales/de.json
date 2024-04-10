@@ -70,6 +70,9 @@
         "contactUs": "Kontaktiere uns",
         "fullNameLabel": "Vollständiger Name",
         "emailLabel": "E-Mail-Adresse",
+        "selectRecipient" : "Empfänger auswählen",
+        "lineManager" : "Linienmanager",
+        "systemAdministrator" : "Systemverwalter",
         "messageLabel": "Nachricht",
         "sendButton": "Senden"
     },
