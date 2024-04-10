@@ -121,7 +121,7 @@
     border-radius: 25px;
     z-index: 1000;
     position: absolute;
-    top: 275px;
+    top: 25%;
     right: 20px;
 }
 
@@ -156,6 +156,7 @@ form {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    padding-bottom: 20px;
 }
 
 label {
@@ -189,7 +190,7 @@ button[type="submit"]:hover {
 .button-container {
     display: flex;
     justify-content: center;
-    margin-top: 60px;
+    
 }
 
 .main-content {
