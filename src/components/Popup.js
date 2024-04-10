@@ -17,7 +17,6 @@ const Popup = ({ onClose }) => {
         setMessage('');
         onClose();
 
-        // Display alert based on selected recipient
         let recipientName = selectedRecipient === 'System Administrator' ? t('popup.systemAdministrator') : t('popup.lineManager');
         alert(`Message has been sent to ${recipientName}`);
     }
